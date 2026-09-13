@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0d;
+    color: #e8e8e8;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 40px 8%;
+    border-bottom: 1px solid #25252a;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 6px;
+}
+
+header p {
+    margin-top: 8px;
+    color: #aaa; /* contraste melhorado */
+}
+
+main {
+    padding: 50px 8%;
+}
+
+.personagens h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #121216;
+    border: 1px solid #29292f;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 380px; /* altura uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card-imagem {
+    height: 200px; /* altura fixa para padronizar */
+    background: #1a1a1f;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.card-info a {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #e8e8e8;
+    color: #0b0b0d;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto; /* botão sempre alinhado no final */
+    transition: background 0.3s ease;
+}
+
+.card-info a:hover {
+    background: #cfcfcf;
+}

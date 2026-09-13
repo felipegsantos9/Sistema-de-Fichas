@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0808;
+    color: #f4eeee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#entrada {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background:
+        radial-gradient(circle at center, rgba(255, 99, 35, .13), transparent 35%),
+        #080606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease;
+}
+
+#entrada.saindo {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.entrada-conteudo {
+    text-align: center;
+}
+
+.entrada-conteudo span {
+    color: #e86638;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.entrada-conteudo h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(42px, 8vw, 90px);
+    margin: 18px 0 5px;
+    background: linear-gradient(90deg, #ff6135, #ffc45c, #ff6135);
+    background-clip: text;
+    color: transparent;
+}
+
+.entrada-conteudo p {
+    color: #aaa;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+#controle-musica {
+    background: transparent;
+    border: transparent;
+
+    color: white;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+}
+
+#entrar {
+    margin-top: 45px;
+    background: transparent;
+    border: 1px solid #c85230;
+    color: #e97850;
+    padding: 14px 28px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+
+
+#entrar:hover {
+    background: #c85230;
+    color: white;
+    box-shadow: 0 0 30px rgba(200, 82, 48, .35);
+}
+
+#site {
+    opacity: 1;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 8, 8, .8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e86638;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ef7650;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 8% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 75% 50%, rgba(255, 98, 35, .13), transparent 35%),
+        linear-gradient(120deg, #0b0808, #120b09);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.tag,
+.section-title span,
+.hero-text > p,
+.weapon-info > span,
+.power-attack > div > span,
+.ability > div > span {
+    color: #e86638;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: clamp(65px, 8vw, 125px);
+    line-height: .9;
+    margin: 25px 0;
+}
+
+.hero h1 strong {
+    font-weight: 600;
+    color: #ef7048;
+}
+
+.hero-text > p {
+    color: #ccc;
+}
+
+.hero-info {
+    display: flex;
+    gap: 45px;
+    margin-top: 55px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-info span,
+.info-box span,
+.status-card span,
+.attribute-grid span {
+    color: #777;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.hero-info b {
+    font-size: 15px;
+}
+
+.hero-image {
+    height: 650px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image .circle {
+    height: 650px;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 106, 52, .22), transparent 65%);
+    border: 1px solid rgba(239, 112, 72, .2);
+    box-shadow:
+        0 0 100px rgba(239, 100, 50, .12),
+        inset 0 0 70px rgba(255, 170, 70, .06);
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    max-height: 600px;
+    max-width: 90%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, .6));
+}
+
+.section {
+    padding: 120px 8%;
+    background: #0d0909;
+}
+
+.section.dark {
+    background: #090707;
+}
+
+.section-title {
+    margin-bottom: 65px;
+}
+
+.section-title h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 100px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text p {
+    color: #aaa;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    border-top: 1px solid #292020;
+}
+
+.info-box div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #292020;
+}
+
+.info-box b {
+    text-align: right;
+    font-size: 12px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.status-card {
+    min-height: 150px;
+    padding: 25px;
+    border: 1px solid #292020;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #0e0a0a;
+}
+
+.status-card strong {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #e7d8d4;
+}
+
+.status-card.destaque {
+    border-color: rgba(239, 102, 57, .45);
+    background: linear-gradient(145deg, rgba(239, 102, 57, .1), #0e0a0a);
+}
+
+.status-card.destaque strong {
+    color: #f0774d;
+}
+
+.attributes {
+    margin-top: 70px;
+}
+
+.attributes h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.attribute-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.attribute-grid div {
+    border: 1px solid #292020;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attribute-grid strong {
+    font-size: 28px;
+    color: #ef7048;
+}
+
+.weapon,
+.power-attack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    border: 1px solid #302222;
+    background: #100b0b;
+}
+
+.weapon h3,
+.power-attack h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.weapon p {
+    color: #888;
+}
+
+.damage {
+    text-align: right;
+}
+
+.damage strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    color: #ed744b;
+}
+
+.damage span {
+    color: #777;
+    font-size: 11px;
+}
+
+.power-attack {
+    margin-top: 15px;
+    background: linear-gradient(100deg, rgba(211, 76, 40, .1), #100b0b);
+}
+
+.cost {
+    color: #777;
+    text-align: right;
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+.power-grid,
+.effects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.power-card,
+.effect-card {
+    padding: 35px;
+    min-height: 270px;
+    border: 1px solid #292020;
+    background: #0e0a0a;
+    transition: .3s;
+}
+
+.power-card:hover,
+.effect-card:hover {
+    border-color: rgba(239, 112, 72, .5);
+    transform: translateY(-5px);
+}
+
+.power-card > span {
+    color: #e86638;
+    font-size: 11px;
+}
+
+.power-card h3,
+.effect-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    margin: 45px 0 18px;
+}
+
+.power-card p,
+.effect-card p {
+    color: #888;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.ability {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+    padding: 50px 0;
+    border-top: 1px solid #302424;
+}
+
+.ability-number {
+    font-family: 'Cinzel', serif;
+    font-size: 45px;
+    color: #e86638;
+}
+
+.ability h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+    margin: 12px 0 20px;
+}
+
+.ability p {
+    max-width: 850px;
+    color: #888;
+    line-height: 1.9;
+}
+
+.effects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.effects b {
+    padding: 10px 14px;
+    border: 1px solid rgba(239, 112, 72, .35);
+    color: #ed805c;
+    font-size: 11px;
+}
+
+.ability small {
+    color: #666;
+}
+
+.effect-card {
+    min-height: 240px;
+}
+
+.effect-card > span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #e86638;
+}
+
+.effect-card strong {
+    display: block;
+    color: #e87a55;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.effect-card.debuff {
+    border-color: rgba(120, 80, 80, .5);
+}
+
+.effect-card.debuff > span {
+    color: #b77d7d;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #292020;
+    border: 1px solid #292020;
+}
+
+.skills-grid div {
+    background: #0d0909;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.skills-grid strong {
+    color: #ed7650;
+}
+
+.final {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 8%;
+    background:
+        radial-gradient(circle at center, rgba(255, 98, 35, .13), transparent 35%),
+        #080606;
+}
+
+.final span {
+    color: #e86638;
+    letter-spacing: 4px;
+    font-size: 10px;
+}
+
+.final h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(45px, 7vw, 90px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.final p {
+    color: #666;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+footer {
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #201919;
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+#topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: #e86638;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    opacity: .8;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 130px;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .status-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .power-grid,
+    .effects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-info {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-image .circle {
+        width: 330px;
+        height: 330px;
+    }
+
+    .status-grid,
+    .attribute-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weapon,
+    .power-attack {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .damage {
+        text-align: left;
+    }
+
+    .ability {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .section {
+        padding: 90px 6%;
+    }
+}
