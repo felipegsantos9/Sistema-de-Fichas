@@ -243,7 +243,7 @@ img {
 .character-placeholder strong,
 .character-placeholder small {
     font-family: "Eater", cursive;
-    Font-size: 100px;
+    font-size: 100px;
     position: relative;
     z-index: 3;
 }
@@ -260,7 +260,7 @@ img {
 }
 
 .hero-text h2 {
-    font: 800 90px , cursive;
+    font: 800 90px "Eater", cursive;
     letter-spacing: 2px;
     line-height: .95;
     margin: 20px 0 12px;
@@ -394,7 +394,7 @@ img {
     position: absolute;
     right: 20px;
     bottom: 10px;
-    font: 800 100px Cursive;
+    font: 800 100px cursive;
     color: rgba(125, 25, 25, .13);
     z-index: 2;
 }
